@@ -46,14 +46,15 @@
           "https://cdn.pixabay.com/photo/2016/06/13/10/06/clownfish-1453910_960_720.jpg",
       };
 
-      const element = getGreeting(user);
+      const element = (
+        <div>
+          <h1>{getGreeting(user)}</h1> <img src={user.avatarURL} />{" "}
+        </div>
+      );
       const rootCreate = ReactDOM.createRoot(
         document.getElementById("content")
       );
       rootCreate.render(element);
-      const elementPicture = <img src={user.avatarURL} />;
-      const rootCreate1 = ReactDOM.createRoot(document.getElementById("box"));
-      rootCreate1.render(elementPicture);
 
       // Note: this structure is simplified
       // const element = {
