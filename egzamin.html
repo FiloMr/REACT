@@ -29,15 +29,12 @@
         "Angular dla początkujących",
         "Kurs Django",
       ];
+      const listCourse = courses.map((item) => <li>{item}</li>);
       const Show = (props) => {
         return (
           <div>
             <h2>Liczba kursów {props.course}</h2>
-            <ol>
-              <li>{courses[0]}</li>
-              <li>{courses[1]}</li>
-              <li>{courses[2]}</li>
-            </ol>
+            <ol>{listCourse}</ol>
             <form>
               <label>Imie i nazwisko</label>
 
