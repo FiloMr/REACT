@@ -1,0 +1,19 @@
+#poleImie {
+  display: block;
+  
+}
+#imie {
+  display: block;
+}
+#poleNumer {
+  display: block;
+}
+#number {
+  display: block;
+}
+#content{
+  display: block;
+}
+body{
+  margin: 0;
+}
