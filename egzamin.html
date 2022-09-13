@@ -29,20 +29,34 @@
         "Angular dla początkujących",
         "Kurs Django",
       ];
-      const listCourse = courses.map((item) => <li>{item}</li>);
+      const listCourse = courses.map((item, index) => (
+        <li key={index}>{item}</li>
+      ));
+
+      function getElement(e) {
+        e.preventDefault();
+        const write = document.getElementById("imie");
+        console.log(write.value);
+      }
+
       const Show = (props) => {
         return (
           <div>
             <h2>Liczba kursów {props.course}</h2>
             <ol>{listCourse}</ol>
-            <form>
+            <form onSubmit={getElement}>
               <label>Imie i nazwisko</label>
 
-              <input type="text" />
+              <input type="text" id="imie" />
 
               <label>Numer kursu</label>
 
-              <input type="text" />
+              <input
+                type="number"
+                id="number"
+                min="1"
+                max={props.course.length}
+              />
 
               <input type="submit" value="Zapisz do kursu" />
             </form>
